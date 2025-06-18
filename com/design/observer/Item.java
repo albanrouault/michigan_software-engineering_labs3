@@ -5,35 +5,35 @@ public class Item {
     private double price;
 
     public Item(String name, double price) {
-        // Not yet implemented
+        this.name = name;
+        this.price = price;
     }
 
     public double getPrice() {
-        // Not yet implemented
-        return 0.0;
+        return price;
     }
 
     public void setPrice(double price) {
-        // Not yet implemented
+        this.price = price;
     }
 
     public String getName() {
-        // Not yet implemented
-        return "";
+        return name;
     }
 
     public void setName(String name) {
-        // Not yet implemented
+        this.name = name;
     }
 
     public static Item getRandomItem() {
-        // Not yet implemented
-        return null;
+        return new Item("Item " + ((int) (Math.random() * 10000) + 1), Math.random() * 99 + 1);
     }
 
     @Override
     public String toString() {
-        // Not yet implemented
-        return "";
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
